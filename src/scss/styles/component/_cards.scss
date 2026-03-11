@@ -1,95 +1,191 @@
-.achievements{
-    hr{
-        border: 1px solid rgba(0, 0, 0, 0.107);
-    }
-    h2{
-        text-align: center;
-        font-weight: 700;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #585a73;
-    }
+.card {
+  min-inline-size: 0;
+  overflow: hidden;
 }
-.card__achievement{
-    margin: 2rem;
-    h3{
-        color: rgb(25, 97, 253);
-        text-align: center;
-        font-size: 3rem;
-        padding: 0 1.75rem;
-    }
-    p{
-        text-align: center;
-        font-family: 500px;
-        font-size: 1.5rem;
-    }
-}
-.achievement_second{
-    border: 2px solid rgba(0, 0, 0, 0.107);
-    border-top: 0;
-    border-bottom: 0;
-}
-.card__services{
-    width: 425px;
-    background-color: white;
-    border-radius: 15px;
-    padding: 3rem 0;
-    letter-spacing: 0.75px;
 
-    .card{
-        margin: auto;
-        max-width: 245px;    
-        background-color: white;
-    }
-    h3{
-        color: black;
-        text-align: center;
-        font-size: 1.75rem;
-        padding: 0 1.75rem;
-        padding: 1rem 2rem;
-        font-weight: 700;
-    }
-    p{
-        text-align: center;
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 1.25rem;
-        font-weight: 400;
-    }
+.card--media img,
+.gallery__item img,
+.profile__photo img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
-.wrapper{
-    padding: 3rem 0;
+
+.card--panel {
+  padding: 56px 50px 46px;
+  background: linear-gradient(130deg, #243348 0%, #202d40 100%);
+
+  h2 {
+    margin-bottom: 24px;
+    color: #bfcbde;
+    font-size: clamp(52px, 5.3vw, 76px);
+    font-weight: 300;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    color: var(--color-muted);
+    font-size: clamp(12px, 0.95vw, 14px);
+    line-height: 1.8;
+  }
 }
-.services{
-    hr{
-        border: 1px solid rgba(0, 0, 0, 0.107);
-        margin-bottom: 1rem;
-    }
-    h2{
-        text-align: center;
-        font-weight: 700;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #585a73;
-        padding-bottom: 1rem;
-    }
+
+.card--history p {
+  max-inline-size: 97%;
 }
-.plan{
-    &__text{
-        padding-top: 3.5rem;
-        max-width: 495px;
-        h3{
-            font-weight: 700;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana,    sans-serif;
-            color: #585a73;
-            font-size: 2.75rem;
-            margin-bottom: 1.75rem;
-        }
-        p{
-            font-family:system-ui, -apple-system,   BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,   Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 1.75rem;
-            font-weight: 400;
-            margin-bottom: 3.25rem;
-        }
-        .btn{
-            padding: 0.8rem 4rem;
-        }
-    }
+
+.card--features {
+  background:
+    linear-gradient(130deg, rgba(38, 50, 71, 0.95) 0%, rgba(32, 43, 61, 0.98) 100%),
+    url("../../../img/overlay.svg") center / cover no-repeat;
+
+  > p {
+    max-inline-size: 94%;
+    margin-bottom: 38px;
+  }
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.feature {
+  min-inline-size: 0;
+
+  h3 {
+    margin-bottom: 10px;
+    color: #e0e7f2;
+    font-size: clamp(26px, 2.35vw, 38px);
+    font-weight: 500;
+    line-height: 1.08;
+  }
+
+  p {
+    color: var(--color-muted-soft);
+    font-size: clamp(11px, 0.9vw, 13px);
+    line-height: 1.7;
+  }
+}
+
+.feature__icon {
+  display: block;
+  margin-bottom: 18px;
+  color: #d7c45d;
+}
+
+.feature__icon--bars {
+  position: relative;
+  inline-size: 36px;
+  block-size: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    block-size: 3px;
+    background: currentColor;
+    box-shadow: 0 9px 0 currentColor, 0 18px 0 currentColor;
+  }
+}
+
+.feature__icon--rocket {
+  position: relative;
+  inline-size: 36px;
+  block-size: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 2px 10px auto auto;
+    inline-size: 18px;
+    block-size: 7px;
+    background: currentColor;
+    border-radius: 999px;
+    transform: rotate(35deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 13px 5px auto auto;
+    inline-size: 6px;
+    block-size: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+}
+
+.feature-nav {
+  margin-top: 30px;
+  display: flex;
+  gap: 22px;
+  color: #98a6bb;
+  font-size: clamp(28px, 2.5vw, 38px);
+  line-height: 1;
+}
+
+.card--jobs {
+  padding-top: 26px;
+  background:
+    linear-gradient(130deg, rgba(41, 55, 77, 0.95) 0%, rgba(32, 45, 65, 0.98) 100%),
+    url("../../../img/overlay.svg") center / cover no-repeat;
+
+  h2 {
+    margin-bottom: 12px;
+  }
+}
+
+.jobs__lead {
+  max-inline-size: 95%;
+  margin-bottom: 26px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.profile {
+  min-inline-size: 0;
+
+  h3 {
+    margin-bottom: 6px;
+    color: #dde4ef;
+    font-size: clamp(24px, 2.25vw, 34px);
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  p {
+    color: #9ba8bc;
+    font-size: clamp(16px, 1.1vw, 18px);
+    line-height: 1.3;
+  }
+}
+
+.profile__photo {
+  margin-bottom: 14px;
+  block-size: 206px;
+  background: #1d2839;
+}
+
+@media (max-width: 860px) {
+  .card--panel {
+    padding: 30px 20px;
+  }
+
+  .feature-list,
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .profile__photo {
+    block-size: 240px;
+  }
 }

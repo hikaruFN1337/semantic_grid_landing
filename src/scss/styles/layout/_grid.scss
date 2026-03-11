@@ -1,49 +1,109 @@
-.grid{
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0,1fr));
-    gap: 16px;
-
+.home-page {
+  overflow-x: hidden;
 }
 
-.col-1{grid-column: span 1;}
-.col-2{grid-column: span 2;}
-.col-3{grid-column: span 3;}
-.col-4{grid-column: span 4;}
-.col-5{grid-column: span 5;}
-.col-6{grid-column: span 6;}
-.col-7{grid-column: span 7;}
-.col-8{grid-column: span 8;}
-.col-9{grid-column: span 9;}
-.col-10{grid-column: span 10;}
-.col-11{grid-column: span 11;}
-.col-12{grid-column: span 12;}
-
-
-
-@media(max-width:768px){
-    .col-md-1{grid-column: span 1;}
-    .col-md-2{grid-column: span 2;}
-    .col-md-3{grid-column: span 3;}
-    .col-md-4{grid-column: span 4;}
-    .col-md-5{grid-column: span 5;}
-    .col-md-6{grid-column: span 6;}
-    .col-md-7{grid-column: span 7;}
-    .col-md-8{grid-column: span 8;}
-    .col-md-9{grid-column: span 9;}
-    .col-md-10{grid-column: span 10;}
-    .col-md-11{grid-column: span 11;}
-    .col-md-12{grid-column: span 12;}
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 520px 610px 430px;
+  grid-template-areas:
+    "ice history"
+    "features road"
+    "gallery jobs";
 }
 
-@media(max-width:500px){
-    [class^="col-"],
-    [class*=" col-"]{
-        grid-column: span 12;
-    }
+.card--ice {
+  grid-area: ice;
+
+  img {
+    object-position: center 50%;
+  }
 }
 
-.box{
-    background-color: aquamarine;
-    border-radius: 20px;
-    height: 300px;
+.card--history {
+  grid-area: history;
+}
+
+.card--features {
+  grid-area: features;
+}
+
+.card--road {
+  grid-area: road;
+
+  img {
+    object-position: center;
+  }
+}
+
+.card--gallery {
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns: 0.36fr 0.32fr 0.32fr;
+  grid-template-rows: 0.48fr 0.52fr;
+}
+
+.gallery__item {
+  overflow: hidden;
+}
+
+.gallery__item--a {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.gallery__item--b {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+.gallery__item--c {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.gallery__item--d {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.gallery__item--e {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.card--jobs {
+  grid-area: jobs;
+}
+
+@media (max-width: 1040px) {
+  .home-grid {
+    grid-template-rows: 470px 560px 420px;
+  }
+}
+
+@media (max-width: 860px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "ice"
+      "history"
+      "features"
+      "road"
+      "gallery"
+      "jobs";
+  }
+
+  .card--ice,
+  .card--history,
+  .card--features,
+  .card--road,
+  .card--jobs {
+    min-block-size: 300px;
+  }
+
+  .card--gallery {
+    min-block-size: 340px;
+  }
 }

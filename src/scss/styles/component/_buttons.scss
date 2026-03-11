@@ -1,8 +1,41 @@
-.btn{
-    color: white;
-    background-color: rgb(25, 97, 253);
-    padding: 0.6rem 1rem;
-    border-radius: 10px;
-    border: none;
-    justify-self: start;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    transform var(--transition-fast),
+    filter var(--transition-fast),
+    background-color var(--transition-fast);
+
+  &:hover {
+    filter: brightness(1.05);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.btn--pill {
+  min-block-size: 56px;
+  padding-inline: 36px;
+  border-radius: var(--radius-pill);
+  background: #23c6bf;
+  color: #e6fffd;
+  font-size: clamp(16px, 1.3vw, 24px);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.btn--primary {
+  min-block-size: 66px;
+  padding-inline: 68px;
+  border-radius: var(--radius-sm);
+  background: #e35856;
+  color: #fff5f4;
+  font-size: clamp(18px, 1.35vw, 24px);
+  font-weight: 600;
 }

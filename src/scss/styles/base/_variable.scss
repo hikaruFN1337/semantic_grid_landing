@@ -1,0 +1,24 @@
+:root {
+  --site-max-width: 1024px;
+  --hero-height: 620px;
+
+  --font-family-sans: "Lato", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --color-page-bg: #111a2b;
+  --color-text: #e9edf5;
+  --color-muted: #8a97ad;
+  --color-muted-soft: #76849b;
+
+  --color-panel: #202d43;
+  --color-panel-soft: #263349;
+
+  --color-accent-cyan: #1fc8b5;
+  --color-accent-red: #e45d57;
+
+  --color-line: rgba(255, 255, 255, 0.34);
+
+  --radius-sm: 4px;
+  --radius-pill: 999px;
+
+  --transition-fast: 180ms ease;
+}
