@@ -4,108 +4,183 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/semantic_grid_landing/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>landing-page-2</title>
-    <script type="module" crossorigin src="/semantic_grid_landing/assets/index-8xP4w29v.js"></script>
-    <link rel="stylesheet" crossorigin href="/semantic_grid_landing/assets/index-DZBcomeq.css">
+    <title>Semantic Grid Landing</title>
+    <script type="module" crossorigin src="/semantic_grid_landing/assets/index-CZHweFlU.js"></script>
+    <link rel="stylesheet" crossorigin href="/semantic_grid_landing/assets/index-Cu-qvAPU.css">
   </head>
-  <body>
-    <header>
-      <ul class="menu">
-        <li><a href="#">LOGO</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <body class="home-page">
+    <header class="hero section" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <div class="hero__top">
+          <a class="logo" href="#" aria-label="Homepage">
+            <img src="/semantic_grid_landing/assets/logo-D5ztLB2L.png" alt="" width="1113" height="369" />
+          </a>
+          <a class="btn btn--pill" href="#">Sign Up</a>
+        </div>
 
-      <section class="hero container grid">
-        <h1 class="col-12">Grow Your Business with Us</h1>
-        <p class="col-12">Get the best solutions to take your business <br> to the next level</p>
-        <a class="btn col-12" href="">Get Started</a>
-      </section>
+        <div class="hero__content">
+          <h1 id="hero-title" class="visually-hidden">Limited offer landing page</h1>
+          <ul class="counter" aria-label="Countdown timer">
+            <li class="counter__item">
+              <strong>287</strong>
+              <span>Days</span>
+            </li>
+            <li class="counter__item">
+              <strong>04</strong>
+              <span>Hours</span>
+            </li>
+            <li class="counter__item">
+              <strong>10</strong>
+              <span>Minutes</span>
+            </li>
+            <li class="counter__item">
+              <strong>56</strong>
+              <span>Seconds</span>
+            </li>
+          </ul>
+
+          <p class="hero__lead">
+            Before time runs out, enjoy a <strong>Very Limited Opportunity</strong> by
+            subscribing to our newsletter. Click on the red button to get more information
+            about our promo!
+          </p>
+
+          <a class="btn btn--primary" href="#">Pre-order now</a>
+        </div>
+
+        <span class="hero__scroll-cue" aria-hidden="true"></span>
+
+        <ul class="hero__dots hero__dots--vertical" aria-hidden="true">
+          <li class="is-active"></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+        <ul class="hero__dots hero__dots--horizontal" aria-hidden="true">
+          <li class="is-active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </header>
 
     <main>
-      <section class="achievements container grid">
-        <h2 class="col-12">Our Achievements</h2>
-        <hr class="col-12">
-        <article class="card__achievement col-4">
-          <div class="card">
-            <h3>150+</h3>
-            <p>Projects Completed</p>
-          </div>
+      <section class="home-grid" aria-label="Feature mosaic">
+        <figure class="card card--media card--ice">
+          <img src="/semantic_grid_landing/assets/home-slide-2-CpBlQRje.jpg" alt="Ice formation with a deep blue cave" />
+        </figure>
+
+        <article class="card card--panel card--history">
+          <h2>Rest is history</h2>
+          <p>
+            Ac eu gours ero difflics ufit, molibee catooea. lamecetur adipisicing elit in
+            orebione at im conimoonmante tenfeldus. Doks aani o sod ficrnum malesuada
+            sequis, la lopus ut bapis quas eause metin oneoques ut ulatoae nobilis ts alaf
+            urt maugia iqy aill equs manumrer medas. corroo doque. Culsaatrm ve loc life
+            hneprenectiue coooeigo, melitg ilia roa decotnquiae mcaeoaa, fibous riot de
+            teuratis fidlyya obegeat ets ea facidit ut facqua; caditih aeu faorat, meqwert o
+            facdilin qelilis satois comset, feraperunt un. Praecellis altorra rod qaitn
+            pequisas mela, reu aqrrs. In recictum va ceacqunt ec, edifqeotum mequias niClet
+            laeecqarazr lamam footous lec cellirismm ex ecl insa dottent et venoes, aetiquus
+            teath vaugimte. In tenfollin mughial, fovils hoifis commquiut. dohiqque, Dionsat
+            ilaat decammiit, vetlur ae ipemic ouo mogaiaa ia hioootbus eutim fehixq oufor
+            aequsa en Rigadatah laicaratium. Fteqonf mequarz mccoue vertigra, eu sedi tit
+            cou petiess arnti, ebenenatum eart ince-etelis naerifiiaus rratus melus, ut eu
+            iiserne suupermtum.
+          </p>
         </article>
 
-        <article class="card__achievement achievement_second col-4">
-          <div class="card">
-            <h3>300+</h3>
-            <p>Happy Clients</p>
+        <section class="card card--panel card--features" aria-labelledby="features-title">
+          <h2 id="features-title">Awesome<br />features</h2>
+          <p>
+            Ac au imte a cmctte ineaeliter, ils cts faclur adinricing eliil pzar rofia.
+            Trebeot na lubrentobits perotzam eout ctooon ut tsotfurn ned pninrm met, Dotta
+            arranorfium ut miblues, eu coui mummm capis vd fier maxeae urfut coniemmitte iu
+            at tnim pr hio oenagilit.
+          </p>
+
+          <div class="feature-list">
+            <article class="feature">
+              <span class="feature__icon feature__icon--bars" aria-hidden="true"></span>
+              <h3>Coded with precision</h3>
+              <p>
+                Ac nteic cstcter aet aree, curtes peacans ntin cenequer noea iitlibea,
+                eflei z arrzes occonsaeuut neezeatzuar celnrpziot ec, viciu criuen quuis dfi
+                azrnmifia mqaez, ned Iegimun.
+              </p>
+            </article>
+
+            <article class="feature">
+              <span class="feature__icon feature__icon--rocket" aria-hidden="true"></span>
+              <h3>Ready for your project</h3>
+              <p>
+                Focri nerz ntoilfer cift aree, curtier secitue reiin caenotn noea iitlibea,
+                teihi a arrzes occonsaeuut reezeatzuar celnicrazit ec, velii rribren quuis
+                dfi azrnmifia mqaez, ned Iegimun.
+              </p>
+            </article>
           </div>
-        </article>
 
-        <article class="card__achievement col-4">
-          <div class="card">
-            <h3>100%</h3>
-            <p>Satisfaction Rate</p>
+          <div class="feature-nav" aria-hidden="true">
+            <span>&lt;</span>
+            <span>&gt;</span>
           </div>
-        </article>
-      </section>
-
-      <div class="wrapper">
-        <section class="services container grid">
-          <h2 class="col-12">Our Services</h2>
-          <hr class="col-12">
-          <article class="card__services col-4">
-            <div class="card">
-              <img src="/semantic_grid_landing/assets/service_one-ZNoM_u6N.png" alt="">
-              <h3>Service One</h3>
-              <p>Short decription of service one.</p>
-            </div>
-          </article>
-
-          <article class="card__services col-4">
-            <div class="card">
-              <img src="/semantic_grid_landing/assets/service_two-BNCUTR0W.png" alt="">
-              <h3>Service Two</h3>
-              <p>Short decription of service two.</p>
-            </div>
-          </article>
-
-          <article class="card__services col-4">
-            <div class="card">
-              <img src="/semantic_grid_landing/assets/service_three-ON-OXhoG.png" alt="">
-              <h3>Service Three</h3>
-              <p>Short decription of service three.</p>
-            </div>
-          </article>
         </section>
-      </div>
 
-      <section class="plan container grid">
-        <div class="plan__img col-6">
-          <img src="/semantic_grid_landing/assets/clipboard-DcUcAV9z.png" alt="">
-        </div>
-        <div class="plan__text col-6">
-          <h3>Ready to Get Started?</h3>
-          <p>Contact us today to discuss your needs and get a free consultation</p>
-          <a class="btn col-12" href="">Contact Us</a>
-        </div>
-      </section>
+        <figure class="card card--media card--road">
+          <img
+            src="/semantic_grid_landing/assets/home-slide-3-vKS1WSo9.jpg"
+            alt="Person in a yellow jacket overlooking a winding road"
+          />
+        </figure>
 
-      <section class="clouds">
-        <h3>Ready to Get Started?</h3>
-        <p>Contact us today to discuss your needs and get a free consultation</p>
+        <section class="card card--gallery" aria-label="Project gallery">
+          <figure class="gallery__item gallery__item--a">
+            <img src="/semantic_grid_landing/assets/gallery-1-CxhCPpqY.jpg" alt="Pineapples over turquoise water" />
+          </figure>
+          <figure class="gallery__item gallery__item--b">
+            <img src="/semantic_grid_landing/assets/gallery-2-Dxvflxl0.jpg" alt="Dark ocean texture" />
+          </figure>
+          <figure class="gallery__item gallery__item--c">
+            <img src="/semantic_grid_landing/assets/gallery-3-5mAdmuH6.jpg" alt="Layered desert curves" />
+          </figure>
+          <figure class="gallery__item gallery__item--d">
+            <img src="/semantic_grid_landing/assets/gallery-4-DE0HoNj_.jpg" alt="Close-up of a hand and wristwatch" />
+          </figure>
+          <figure class="gallery__item gallery__item--e">
+            <img src="/semantic_grid_landing/assets/gallery-5-B5paX3UY.jpg" alt="Foggy mountains and ridges" />
+          </figure>
+        </section>
+
+        <section class="card card--panel card--jobs" aria-labelledby="jobs-title">
+          <h2 id="jobs-title">Jobs made by</h2>
+          <p class="jobs__lead">
+            Ac ncmmi e ot dligiah avln sericao teurim ooeotuer nequism ftrdeu suapiolrneins,
+            maquia adiqus. praeourent les ooe meeounr necbn miedus, piteri necin oporace en
+            apicfecs. Eiue, trieras et oo oamrqipinc e pamiuQus.
+          </p>
+
+          <div class="profile-grid">
+            <article class="profile">
+              <figure class="profile__photo">
+                <img src="/semantic_grid_landing/assets/member-1-jp7P4MMZ.jpg" alt="Claire Smith portrait" />
+              </figure>
+              <h3>Claire Smith</h3>
+              <p>Creative Director</p>
+            </article>
+
+            <article class="profile">
+              <figure class="profile__photo">
+                <img src="/semantic_grid_landing/assets/member-2-C2WP0UyZ.jpg" alt="Julian Palmer portrait" />
+              </figure>
+              <h3>Julian Palmer</h3>
+              <p>Lead Designer</p>
+            </article>
+          </div>
+        </section>
       </section>
     </main>
-
-    <footer>
-      <section class="ending container grid">
-        <p>&copy;2024 Your Company</p>
-        <p>Privacy Policy</p>
-        <hr>
-        <p>Terms of Use</p>
-      </section>
-    </footer>
 
   </body>
 </html>
